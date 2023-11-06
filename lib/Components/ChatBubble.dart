@@ -2,14 +2,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../Consts.dart';
-import '../Pages/ChatPage.dart';
 import '../models/MessagesModel.dart';
 import 'Colors.dart';
 
 class ChatBubbleMajor extends StatelessWidget {
   ChatBubbleMajor({super.key, required this.message});
   final Message message;
-  CollectionReference messages =
+  final CollectionReference messages =
       FirebaseFirestore.instance.collection(KMessagesCollection);
 
   @override
@@ -56,7 +55,7 @@ class ChatBubbleMajor extends StatelessWidget {
 class ChatBubbleSubsidiary extends StatelessWidget {
   ChatBubbleSubsidiary({super.key, required this.message});
   final Message message;
-  CollectionReference messages =
+  final CollectionReference messages =
       FirebaseFirestore.instance.collection(KMessagesCollection);
 
   @override

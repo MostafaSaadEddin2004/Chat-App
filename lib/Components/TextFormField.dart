@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CustomTextForm extends StatelessWidget {
-  CustomTextForm({this.lable, this.hintText, this.onTap});
-  String onChange(String? data) {
+  const CustomTextForm({super.key, this.lable, this.hintText, this.onTap});
+  String? onChange(String? data) {
     return data!;
   }
 
-  String? lable;
-  String? hintText;
-  VoidCallback? onTap;
+  final String? lable;
+  final String? hintText;
+  final VoidCallback? onTap;
   @override
   Widget build(BuildContext context) {
     return TextField(
